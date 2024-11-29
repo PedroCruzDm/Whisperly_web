@@ -1,0 +1,10 @@
+{
+    "name": "joaop/concord",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Joaop\\Concord\\": "src/"
+        }
+    },
+    "require": {}
+}
