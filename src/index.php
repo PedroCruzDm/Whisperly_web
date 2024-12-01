@@ -7,6 +7,11 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <?php include('./views/pages/includes/header.php') ?>
+    </header>
+    <main>
+        
+    </main>
 </body>
 </html>
