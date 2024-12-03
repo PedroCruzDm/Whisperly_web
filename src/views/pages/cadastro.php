@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <script src="./../../js/verificadorSenha.js"></script>
 </head>
 <body>
     <header>
@@ -11,12 +12,15 @@
     </header>
     <main>
         <div class="conteiner_cadastro">
-            <form action="./../../model/VerificaSenha.php" method="post">
+            <form action="" method="post">
                 <center>
                     <h2>Cadastrar-se</h2>
                     
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                <br>
+                    <label for="nickUser">NickUser:</label>
+                    <input type="text" name="nickUser" id="nickUser" placeholder="@nomeUsuario" required>
                 <br>
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email" placeholder="E-mail" required>
