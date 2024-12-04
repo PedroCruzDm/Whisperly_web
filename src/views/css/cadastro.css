@@ -1,0 +1,39 @@
+.conteiner_cadastro{
+    margin: 10% 35% 10% 35%;
+    padding: 3% 2% 3% 2%;
+    width: 20%;
+    
+    border: 3px solid white;
+    border-radius: 24px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blue;
+}
+.conteiner_cadastro h2{
+    color: white;
+    text-align: center;
+}
+.conteiner_cadastro form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner_cadastro form label{
+    color: white;
+    margin: 5px;
+}
+.conteiner_cadastro form input{
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+}
+.conteiner_cadastro form button{
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+    color: blue;
+    border: none;
+}
