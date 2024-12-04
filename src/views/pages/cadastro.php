@@ -15,7 +15,9 @@
     </header>
     <main>
         <div class="conteiner_cadastro">
-            <form action="./../../model/usuario.php" method="POST">
+        
+            <form action="./../../controllers/UsuarioController.php?action=cadastrarUser" method="POST">
+            
                 <center>
                     <h2>Cadastrar-se</h2>
                     

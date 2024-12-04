@@ -3,6 +3,7 @@ namespace Concord\controllers;
 
 use Concord\src\model\Usuario;
 use Concord\config\ConnectionFactory;
+use \PDOException;
 
 class UsuarioController{
     public function cadastrarUser($pegarUserInfo){
@@ -19,7 +20,6 @@ class UsuarioController{
             if($senha != $confirmar_senha){ //manitos isso é caso se a senha for diferente, o ! é negar o valor 
                 echo "As senhas não são iguais";
                 return;
-
             }else{
                 $sql = "INSERT INTO users(nome, nickUser, email, telefone, senha, dt_criado) VALUES($nome_usuario, $nick_usuario, $email, $numero, $senha, NOW())";
                 
@@ -38,13 +38,20 @@ class UsuarioController{
                 $stmt->bindParam(':senha', $senha);
 
                 $stmt->execute();
+
+                if ($stmt->rowCount()) {
+                    header("Location: ./../views/menu.php");
+                    exit();
+                } else {
+                    echo "Erro ao cadastrar!";
+                }
+                }
+            } catch (PDOException $e) {
+                error_log("Erro no cadastro: " . $e->getMessage());
+                echo "Erro ao cadastrar. Por favor, tente novamente.";
             }
         }
-        catch(\Exception $e){
-            echo $e->getMessage();
-        }
-    }
-    
 }
+    
 
 ?>
