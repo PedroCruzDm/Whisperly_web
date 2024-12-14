@@ -1,0 +1,30 @@
+@import url(login.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(cadastro.css);
+@import url(animation.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+*
+:root{
+    --cor_borda: green;
+    --cor_primaria: red;
+    --cor_secundaria: blue;
+    --cor_texto: #333;
+}
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+main{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.divisoria{
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+}

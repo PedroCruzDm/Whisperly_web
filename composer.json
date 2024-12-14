@@ -1,9 +1,9 @@
 {
-    "name": "joaop/concord",
+    "name": "joaop/Whisperly",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Concord\\": "src/"
+            "Whisperly\\": "src/"
         }
     },
     "require": {}
