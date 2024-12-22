@@ -1,5 +1,5 @@
 <?php 
-    namespace Concord\main;
+    namespace Whisperly\main;
 
     require __DIR__ . '/../../vendor/autoload.php';
 

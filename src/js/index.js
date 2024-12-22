@@ -1,22 +1,30 @@
-import '';
 let CarregarPagina = () => {
-    let promessa_header = (Response) => {
-        console.info(Response.text().then((data) => {
-            document.getElementById('header').innerHTML = data;
-        }));
-
+    let CarregarHeader = () => {
+        if (document.getElementById('header') != null) {
+            document.getElementById('header').innerHTML = "<p style='color:white;'>Carregando...</p>";
+            fetch('./../../../../src/views/pages/includes/header.php').then((Response) => {
+                Response.text().then((data) => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            });
+        }
     }
 
-    let promessa_footer = (Response) => {
-        console.info(Response.text().then((data) => {
-            document.getElementsByName('footer').innerHTML = data;
-        }))
+    let CarregarFooter = () => {
+        if (document.getElementById('footer') != null) {
+            document.getElementById('footer').innerHTML = "<p style='color:white;'>Carregando...</p>";
+            fetch('./../../../../src/views/pages/includes/footer.php').then((ResponseFooter) => {
+                ResponseFooter.text().then((data) => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+            });
+        }
     }
-    
-    //#region FETCH PAGINA
-    fetch('./../../src/views/pages/includes/header.php').then(promessa_header);
-    fetch('./../../src/views/pages/includes/footer.php').then(promessa_footer);
-    //#endregion
+
+CarregarHeader();
+CarregarFooter();
 }
 
-window.onload = () => { CarregarPagina(); }
+window.onload = () => {
+    CarregarPagina();
+}

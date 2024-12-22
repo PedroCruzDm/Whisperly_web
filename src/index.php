@@ -10,22 +10,19 @@
     <script src="/src/js/index.js"></script>
 </head>
 <body>
-    <header id="header">
-        
-    </header>
+    <header id="header"></header>
+    
     <main>
-        <section>
-            <h1>Whisperly</h1>
-            <p>SE comunica com milhares de Usuarios</p>
-            <button id="btn_login">Login</button>
-            <button id="btn-cadastro">Registrar-se</button>
-
-            <div class="conteudo"></div>
-        </section>
-        
+        <div class="carrossel">
+            <div class="divisoria_carrossel">
+                <button id="btn_Cs_Anterior">anterior</button>
+                <div class="carrossel_content_img">
+                    <img src="./views/img/whisperly.png" alt="Whisperly">
+                </div>
+                <button id="btn_Cs_Proximo">próximo</button>
+        </div>
     </main>
-    <footer>
 
-    </footer>
+    <footer id="footer"></footer>
 </body>
 </html>

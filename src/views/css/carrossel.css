@@ -1,0 +1,13 @@
+.divisoria_carrossel{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+.carrossel_content{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+}

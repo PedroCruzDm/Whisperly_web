@@ -1,5 +1,9 @@
+<?php sleep(1); ?>
 <nav>
     <ul>
+        <li>
+            <a href="./../../../../src/index.php">Home</a>
+        </li>
         <li>
             <p>Sobre nós</p>
         </li>
@@ -7,10 +11,13 @@
             <p>Contato</p>
         </li>
         <li>
-            <button id="btn-login">Login</button>
+            <a href="./../../../../src/views/pages/login.php">Login</a>
         </li>
         <li>
-            <button id="btn-registrar">Registrar-se</button>
+            <a href="./../../../../src/views/pages/cadastro.php">Registrar-se</a>
+        </li>
+        <li>
+            <button id="instalar_site">Dowload</button>
         </li>
     </ul>
 </nav>
