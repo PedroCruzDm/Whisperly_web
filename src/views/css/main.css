@@ -4,6 +4,7 @@
 @import url(cadastro.css);
 @import url(animation.css);
 @import url(carrossel.css);
+@import url(menu.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 *
 :root{
@@ -20,7 +21,7 @@ main{
     display: flex;
     align-content: center;
     justify-content: center;
-    padding-bottom: 30%;
+    padding-bottom: 5%;
     margin-bottom: 5%;
 }
 footer{
@@ -33,3 +34,14 @@ footer{
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.app-button {
+    display: none;
+  }
+  
+  @media (display-mode: standalone) {
+    .app-button {
+      display: block;
+    }
+  }
+  

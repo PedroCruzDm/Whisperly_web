@@ -7,20 +7,21 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="./views/css/main.css">
     <link rel="stylesheet" href="./views/css/header.css">
-    <script src="/src/js/index.js"></script>
+    <script src="/src/js/index.js" type="module"></script>
+    <script src="/src/js/notificar.js" type="module"></script>
 </head>
 <body>
     <header id="header"></header>
     
     <main>
-        <div class="carrossel">
-            <div class="divisoria_carrossel">
-                <button id="btn_Cs_Anterior">anterior</button>
-                <div class="carrossel_content_img">
-                    <img src="./views/img/whisperly.png" alt="Whisperly">
-                </div>
-                <button id="btn_Cs_Proximo">próximo</button>
-        </div>
+        <section id="section">
+            <div class="divisoria">
+                <button id="BTN_login">Login</button>
+                <button id="BTN_cadastro">Cadastrar-se</button>
+            </div>
+            <div class="conteudo">
+            </div>
+        </section>
     </main>
 
     <footer id="footer"></footer>

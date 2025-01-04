@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./../css/main.css">
-    <script src="./../../js/index.js"></script>
+    <script src="./../../js/index.js" type="module"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -13,12 +13,12 @@
     <main>
         <div class="containerlogin">
 
-            <form action="" method="post" id="form_login">
+            <form action="./../../model/Logar.php" method="POST" id="form_login">
                 <center>
                 <div class="titulo">
 
                     <div class="wrapper">
-	                    <svg>   <text x="50%" y="50%" dy=".35em" text-anchor="middle">Whisperly</text>  </svg>
+	                    <svg>   <text x="50%" y="50%" dy=".15em" text-anchor="middle">Whisperly</text>  </svg>
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit">Entrar</button>
+                        <button type="submit" id="btn_logar">Entrar</button>
                         <p>Não tem uma conta? venha se <strong> <a href="./cadastro.php">registrar-se</a> </strong> </p>
                     </center>
                 </form>

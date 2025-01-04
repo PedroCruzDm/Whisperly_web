@@ -1,30 +1,22 @@
-let CarregarPagina = () => {
-    let CarregarHeader = () => {
-        if (document.getElementById('header') != null) {
-            document.getElementById('header').innerHTML = "<p style='color:white;'>Carregando...</p>";
-            fetch('./../../../../src/views/pages/includes/header.php').then((Response) => {
-                Response.text().then((data) => {
-                    document.getElementById('header').innerHTML = data;
-                });
-            });
-        }
-    }
+import { solicitarNotificar, mostrarNotificacao } from './notificar.js';
+import { CarregarPagina } from './carregarPagina.js';
+//erros: 8;
 
-    let CarregarFooter = () => {
-        if (document.getElementById('footer') != null) {
-            document.getElementById('footer').innerHTML = "<p style='color:white;'>Carregando...</p>";
-            fetch('./../../../../src/views/pages/includes/footer.php').then((ResponseFooter) => {
-                ResponseFooter.text().then((data) => {
-                    document.getElementById('footer').innerHTML = data;
-                });
-            });
-        }
-    }
-
-CarregarHeader();
-CarregarFooter();
-}
+let localizador = window.location.pathname;
+console.log(localizador);
 
 window.onload = () => {
-    CarregarPagina();
+
+    switch (localizador){
+        case '/src/index.php':
+            CarregarPagina();
+            solicitarNotificar();
+            break;
+
+        case '/src/views/pages/login.php':
+            CarregarPagina();
+            break;
+    }
+   
+    /*CarregarPagina(), solicitarNotificar();*/
 }

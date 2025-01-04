@@ -2,13 +2,13 @@ footer{
     bottom: 0;
     z-index: 1;
     width: 100%;
-    padding: 10px;
     color: white;
     text-align: center;
     background: #ff5858;
     background: linear-gradient(240deg, #ff5858 0%, #f09819 100%);
 }
 footer ul{
+    padding: 2% 0 2% 0;
     display: flex;
     justify-content: center;
     gap: 20px;
