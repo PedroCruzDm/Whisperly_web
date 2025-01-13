@@ -3,20 +3,25 @@ import { CarregarPagina } from './carregarPagina.js';
 //erros: 8;
 
 let localizador = window.location.pathname;
-console.log(localizador);
+console.info(localizador);
 
 window.onload = () => {
+//erros: 2;
 
     switch (localizador){
         case '/src/index.php':
             CarregarPagina();
-            solicitarNotificar();
+            
+            setTimeout (solicitarNotificar(), 800);
             break;
 
         case '/src/views/pages/login.php':
             CarregarPagina();
             break;
+
+        case '/src/views/pages/cadastro.php':
+            CarregarPagina();
+            break;
     }
-   
-    /*CarregarPagina(), solicitarNotificar();*/
+
 }

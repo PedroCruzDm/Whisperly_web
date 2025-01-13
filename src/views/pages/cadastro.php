@@ -7,16 +7,14 @@
     <link rel="stylesheet" href="./../css/main.css">
     <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/cadastro.css">
-    <script src="./../../js/verificadorSenha.js"></script>
+    <script src="./../../js/index.js" type="module"></script>
 </head>
 <body>
-    <header>
-        <?php include('./includes/header.php') ?>
-    </header>
+    <header id="header"></header>
     <main>
         <div class="containercadastro">
         
-            <form action="./../../controllers/UsuarioController.php?action=cadastrarUser" method="POST">
+            <form action="./../../model/Cadastrar_Usuario.php?r=Cadastrar_Usuario.php&action=cadastrar" method="POST">
                 <center>
                     <h2>Cadastrar-se</h2>
                     

@@ -1,2 +1,2 @@
-CREATE DATABASE concord;
-CREATE TABLE users(id int AUTO_INCREMENT PRIMARY KEY, nome varchar(35), nickuser varchar (40), email varchar(75),telefone varchar(15), senha varchar(25), dt_criado date);
+
+CREATE TABLE usuarios(id int AUTO_INCREMENT PRIMARY KEY,nome varchar(25), nick_user varchar(20), nick_user_permanente varchar(20), email varchar(50), telefone int(13), senha varchar(30));

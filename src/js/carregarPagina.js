@@ -1,31 +1,32 @@
 export function CarregarPagina(){
 
-    let CarregarHeader = () => {
-        if (document.getElementById('header') != null) {
-            document.getElementById('header').innerHTML = "<p style='color:white;'>Carregando...</p>";
+let Carregar_Header = () => {
+    if (document.getElementById('header') != null) {
+        document.getElementById('header').innerHTML = "<p style='color:white;'>Carregando...</p>";
             
-            try{
-                fetch('./../../../../src/views/pages/includes/header.php').then((Response) => {
-                    Response.text().then((data) => {
-                    document.getElementById('header').innerHTML = data;
-                    });
+        try{
+            fetch('./../../../../src/views/pages/includes/header.php').then((Response) => {
+                Response.text().then((data) => {
+                document.getElementById('header').innerHTML = data;
                 });
-            }catch(e){
-                console.error(e);
-                CarregarHeader();
-                return;
-            }
+            });
+
+        }catch(e){
+            console.error(e);
+            CarregarHeader();
+            return;
         }
     }
+}
     
-    let CarregarFooter = () => {
-        if (document.getElementById('footer') != null) {
-            document.getElementById('footer').innerHTML = "<p style='color:white;'>Carregando...</p>";
+let Carregar_Footer = () => {
+    if (document.getElementById('footer') != null) {
+        document.getElementById('footer').innerHTML = "<p style='color:white;'>Carregando...</p>";
             
-            try{
-                fetch('./../../../../src/views/pages/includes/footer.php').then((ResponseFooter) => {
-                    ResponseFooter.text().then((data) => {
-                        document.getElementById('footer').innerHTML = data;
+        try{
+            fetch('./../../../../src/views/pages/includes/footer.php').then((ResponseFooter) => {
+                ResponseFooter.text().then((data) => {
+                document.getElementById('footer').innerHTML = data;
                 });
             });
 
@@ -38,6 +39,6 @@ export function CarregarPagina(){
 }
 //#endregion
     
-CarregarHeader();
-CarregarFooter();
+Carregar_Header();
+Carregar_Footer();
 }
