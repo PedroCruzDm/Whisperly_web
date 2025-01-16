@@ -14,14 +14,15 @@
     <header id="header"></header>
     
     <main>
-        <section id="section">
-            <div class="divisoria">
-                <button id="BTN_login">Login</button>
+        <div class="caixa_login_cadastro">
+            <center>
+                <h1>Whisperly</h1> 
+            <wbr>
+                <button id="BTN_login">Entrar</button>
                 <button id="BTN_cadastro">Cadastrar-se</button>
-            </div>
-            <div class="conteudo">
-            </div>
-        </section>
+            </center>
+        </div>
+    
     </main>
 
     <footer id="footer"></footer>
