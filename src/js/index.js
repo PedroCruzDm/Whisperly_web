@@ -1,6 +1,5 @@
 import { solicitarNotificar, mostrarNotificacao } from './notificar.js';
 import { CarregarPagina } from './carregarPagina.js';
-import{} from './rotas.js';
 //erros: 8;
 
 let localizador = window.location.pathname;

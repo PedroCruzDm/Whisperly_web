@@ -1,10 +1,9 @@
 {
-    "name": "joaop/Whisperly",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Whisperly\\": "src/"
-        }
-    },
-    "require": {}
+  "name": "whisperly/whisperly-app",
+  "description": "Uma simples aplcação em PHP",
+  "autoload": {
+    "psr-4": {
+      "Whisperly\\": "src/"
+    }
+  }
 }

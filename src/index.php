@@ -22,7 +22,19 @@
                 <button id="BTN_cadastro">Cadastrar-se</button>
             </center>
         </div>
-    
+        <div class="carrusel">
+            <div class="item_carrusel">
+                <img src="" alt="img1">
+                <img src="" alt="img2">
+            </div>
+            <div class="controle_carrusel">
+                <button id="BTN_anterior">Anterior</button>
+                <div class="div_btn">
+                    a
+                </div>
+                <button id="BTN_proximo">Próximo</button>
+            </div>
+        </div>
     </main>
 
     <footer id="footer"></footer>

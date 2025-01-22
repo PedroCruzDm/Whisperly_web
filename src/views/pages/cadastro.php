@@ -14,8 +14,8 @@
     <main>
         <div class="containercadastro">
         
-            <form action="./../../model/Cadastrar_Usuario.php?r=Cadastrar_Usuario.php&action=cadastrar" method="POST">
-                <center>
+            <form action="./../../model/Cadastrar_Usuario.php"  method="post"> 
+                
                     <h2>Cadastrar-se</h2>
                     
                     <label for="nome">Nome:</label><br>
@@ -42,9 +42,9 @@
                     </div>
                 </div>
 
-                    <button type="submit">Cadastrar</button>
+                    <input type="submit" value="Cadastrar" class="btn-cadastrar">
                    <p>Ja possui uma conta? Venha fazer <strong><a href="./login.php">Login</a></strong></p> 
-                </center>
+                
             </form>
         </div>
     </main>

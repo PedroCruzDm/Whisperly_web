@@ -1,12 +1,18 @@
-<?php 
+<?php
 
 namespace Whisperly\Model;
-use Whisperly\Config\ConnectionFactory;
-use \PDOException;
+require_once __DIR__ . '/../Config/ConnectionFactory.php';
 
-Class Cadastrar_Usuario {
+use Whisperly\Config\ConnectionFactory;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $cadastrar_usuario = new Cadastrar_Usuario();
+    $cadastrar_usuario->cadastrar();
+}
+class Cadastrar_Usuario {
 
     public function cadastrar(){
+
         $nome = $_POST['nome'];
         $nickUser = $_POST['nickUser'];
         $email = $_POST['email'];
@@ -14,34 +20,33 @@ Class Cadastrar_Usuario {
         $senha = $_POST['senha'];
         $confirmar_senha = $_POST['confirmar_senha'];
 
-        $connection = ConnectionFactory::getConnection();
+        $connection = (new ConnectionFactory())->getConnection();
 
-        $sql_insert = "INSERT INTO usuarios (nome, nick_user, nick_user_permanente, email, telefone, senha) VALUES (:nome, :nick_user, :nick_user, :email, :telefone, :senha)";
+        $sql_insert = "INSERT INTO `usuarios`( `nome`, `nick_user`, `nick_user_permanente`, `email`, `telefone`, `senha`) VALUES (:nome, :nick_user, :nick_user_permanente, :email, :telefone, :senha)";
         $stmt = $connection->prepare($sql_insert);
 
-        if (!$stmt){
-            echo "Erro na preparação da query" . $connection->errorInfo();
-        }
+        // Verifica se as senhas coincidem
+        if ($senha === $confirmar_senha) {
+            $senha_hash = password_hash($senha, PASSWORD_DEFAULT);  // Hash da senha
 
-        if (!$connection){
-            echo "A conexão falhou" . $connection->errorInfo();
-        }
+            // Vincula os parâmetros à query
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':nick_user', $nickUser);
+            $stmt->bindParam(':nick_user_permanente', $nickUser);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':telefone', $numero);
+            $stmt->bindParam(':senha', $senha_hash);
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
-            if ($senha == $confirmar_senha){
-                $stmt->bindParam(':nome', $nome);
-                $stmt->bindParam(':nick_user', $nickUser);
-                $stmt->bindParam(':email', $email);
-                $stmt->bindParam(':telefone', $numero);
-                $stmt->bindParam(':senha', $senha);
-
-                $stmt->execute();
+            // Executa a query
+            if ($stmt->execute()) {
+                header("Location: ./../views/pages/menu.php");
+                exit;
             } else {
-                echo "As senhas não coincidem";
+                echo "Erro ao cadastrar usuário.";
             }
-
+        } else {
+            echo "As senhas não coincidem!";
         }
-
     }
 }
+?>

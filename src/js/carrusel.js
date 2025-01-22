@@ -1,0 +1,1 @@
+let div_carrusel = document.getElementById('carrusel');

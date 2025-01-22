@@ -2,7 +2,7 @@ export function CarregarPagina(){
 
 let Carregar_Header = () => {
     if (document.getElementById('header') != null) {
-        document.getElementById('header').innerHTML = "<p style='color:white;'>Carregando...</p>";
+        document.getElementById('header').innerHTML = "<p style='color:black;'>Carregando...</p>";
             
         try{
             fetch('./../../../../src/views/pages/includes/header.php').then((Response) => {

@@ -1,33 +1,16 @@
 <?php
-    $autoloadpath = __DIR__ . "/../../vendor/autoload.php";
-    include_once($autoloadpath);
-    var_dump($autoloadpath);
 
-    $rota = $_REQUEST['r'];
-    $action = $_REQUEST['action'];
+$autopath = __DIR__ . '/vendor/autoload.php';
 
-    switch($_SERVER["REQUEST_METHOD"]){
-        case 'POST':
-            $rotacontrollerClass = "Whisperly\\Controllers\\" . $rota;
-            $rotacontrollerInstance = new $rotacontrollerClass();
-            $rotacontrollerInstance->$action();
-            break;
-            
-            case 'GET':
-            $action = 'index';
-            break;
+$rotta = $_REQUEST['r'];
+$action = $_REQUEST['action'];
 
-            case !'POST' && !'GET':
-                echo "Método não permitido";
-    }
-    
-    /*    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-            $rotacontrollerClass = "Whisperly\\Controllers\\" . $rota;
-            $rotacontrollerInstance = new $rotacontrollerClass();
-            $rotacontrollerInstance->$action();
-        }
-    
-        if($_SERVER["REQUEST_METHOD"] == "GET"){
-            $action = 'index';
-        }
-    */
+if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+    $action = 'index';
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $routeControllerClass = "Whisperly\\controllers\\" . $rota;
+    $rotaControllerInstance = new $routeControllerClass();
+    $rotaControllerInstance->$action($_POST);
+}
