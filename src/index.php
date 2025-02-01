@@ -9,32 +9,24 @@
     <link rel="stylesheet" href="./views/css/header.css">
     <script src="/src/js/index.js" type="module"></script>
     <script src="/src/js/notificar.js" type="module"></script>
+    <script src="/src/js/rotas.js" type="module"></script>
 </head>
 <body>
     <header id="header"></header>
     
-    <main>
+    <main id="main_index">
         <div class="caixa_login_cadastro">
-            <center>
+            <div class="Titulo">
                 <h1>Whisperly</h1> 
-            <wbr>
-                <button id="BTN_login">Entrar</button>
-                <button id="BTN_cadastro">Cadastrar-se</button>
-            </center>
-        </div>
-        <div class="carrusel">
-            <div class="item_carrusel">
-                <img src="" alt="img1">
-                <img src="" alt="img2">
             </div>
-            <div class="controle_carrusel">
-                <button id="BTN_anterior">Anterior</button>
-                <div class="div_btn">
-                    a
-                </div>
-                <button id="BTN_proximo">Próximo</button>
-            </div>
+        <br>
+        <div class="campoBTN">
+            <button id="BTN_login">Entrar</button>
+            <button id="BTN_cadastro">Cadastrar-se</button>
         </div>
+        </div>
+
+    
     </main>
 
     <footer id="footer"></footer>

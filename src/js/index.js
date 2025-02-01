@@ -1,27 +1,26 @@
 import { solicitarNotificar, mostrarNotificacao } from './notificar.js';
 import { CarregarPagina } from './carregarPagina.js';
-//erros: 8;
-
-let localizador = window.location.pathname;
-console.info(localizador);
 
 window.onload = () => {
-//erros: 2;
+    let status_conexao = navigator.onLine;          //verificador de rede
+    let localizador = window.location.pathname;     //localizador de paginas
 
-    switch (localizador){
-        case '/src/index.php':
+    //console.info(localizador);
+    //console.info("Estado da rede: "+ status_conexao);
+    
+    if(status_conexao == true){
+        if(localizador == '/src/index.php'|| '/src/views/pages/login.php' || '/src/views/pages/cadastro.php'){
             CarregarPagina();
-            
-            setTimeout (solicitarNotificar(), 800);
-            break;
-
-        case '/src/views/pages/login.php':
-            CarregarPagina();
-            break;
-
-        case '/src/views/pages/cadastro.php':
-            CarregarPagina();
-            break;
+            setTimeout (solicitarNotificar(), 10000);
+        }
     }
 
+    if(status_conexao == false){
+        console.log("Offline");
+        location.assign('/src/views/pages/offline.php');
+    }
+    
+    if(localizador == '/src/views/pages/offline.php' && status_conexao == true){
+        location.assign('/src/index.php');
+    }
 }

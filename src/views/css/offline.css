@@ -1,0 +1,20 @@
+main#offline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #FFB62F;
+}
+.aviso_offline{
+    text-align: center;
+    font-weight: bold;
+}
+.aviso_offline h1{
+    font-size: 2.5em;
+    color: #fff;
+}
+.aviso_offline p{
+    font-size: 1.5em;
+    color: #3d3d3d;
+}
