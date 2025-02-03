@@ -1,16 +1,12 @@
 .carrusel{
-    background-color: blue;
+
 }
 
 .item_carrusel{}
 
 .carrusel .controle_carrusel{
-    margin-bottom: 0%;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+
 }
 .carrusel .controle_carrusel .div_btn{
-    border-radius: 50%;
-    background-color: white;
+
 }

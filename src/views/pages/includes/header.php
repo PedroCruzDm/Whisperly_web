@@ -3,6 +3,11 @@
     <script src="./../../../js/index.js"></script>
     <ul>
         <li>
+            <a href="./../../../../src/index.php">
+                <img src="" alt="Whisperly-logo">
+            </a>
+        </li>
+        <li>
             <a href="./../../../../src/index.php">Home</a>
         </li>
         <li>

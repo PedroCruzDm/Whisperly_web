@@ -26,6 +26,13 @@
         </div>
         </div>
 
+        <div class="campo_info">
+            <div class="info">
+                <h2>Whisperly</h2>
+                <p>Whisperly é uma rede social onde você pode compartilhar seus pensamentos, sentimentos e opiniões de forma anônima.</p>
+            </div>
+        </div>
+
     
     </main>
 

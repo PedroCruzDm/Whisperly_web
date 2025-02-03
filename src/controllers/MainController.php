@@ -1,8 +1,7 @@
 <?php
-
 $autopath = __DIR__ . '/vendor/autoload.php';
 
-$rotta = $_REQUEST['r'];
+$rota = $_REQUEST['r'];
 $action = $_REQUEST['action'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){

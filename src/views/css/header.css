@@ -3,11 +3,9 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #FF5858;
+    background-color: #1b4286;
     justify-content: center;
     padding: 32;
-    background: #ff5858;
-    background: linear-gradient(240deg, #ff5858 0%, #f09819 100%);
 }
 
 header nav{

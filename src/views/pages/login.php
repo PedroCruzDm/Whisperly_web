@@ -10,10 +10,16 @@
 <body>
     <header id="header"></header>
 
-    <main>
+    <main id="main_login">
+
+        <div class="Titulo">
+            <h1>Whisperly</h1>
+            <h2>Cadastra-se</h2>
+        </div>
+
         <div class="containerlogin">
 
-            <form action="./../../model/Logar.php" method="POST" id="form_login">
+            <form action="./../../model/Logar_usuario.php" method="POST" id="form_login">
                 <center>
                 <div class="titulo">
 
@@ -31,7 +37,7 @@
                                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"></path>
                             </svg>
 
-                            <input type="text" name="usuario" id="usuario" placeholder="Usuario" required> <br>
+                            <input type="text" name="usuario_login" id="usuario_login" placeholder="Usuario" required> <br>
                             </div>
                         </div>
                         
@@ -42,7 +48,7 @@
                                     <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
                                 </svg>
 
-                                <input type="password" name="senha" id="senha" placeholder="Senha" required=""> <br>
+                                <input type="password" name="senha_login" id="senha_login" placeholder="Senha" required=""> <br>
                             </div>
                         </div>
                         

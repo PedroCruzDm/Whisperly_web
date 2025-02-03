@@ -10,23 +10,22 @@
 <body>
     <header></header>
     <aside class="barra_lateral">
-        <div class="divisoria_barraVertical">
-            <div class="servidores">
-                <ul>
-                    <li>
-                        <img src="https://www.96fm.com.br/storage/2023/09/mCSfTCzOrYXjOEGl5JGNf0RqDc94Nl5o6fKobCV2.jpg" alt="">
-                    </li>
-                </ul>
+       <div class="perfil_info">
+            <div class="divisoria">
+
+                <div class="div_img_perfil">
+                    <img src="" alt="">
+                </div>
+
+                <div class="div_info_perfil">
+                    <p id="nickuser_perfil">NickUser</p>
+                    <p id="estado_perfil">não definido</p>
+                    <button id="config_perfil">config</button>
+                </div>
             </div>
-            <div class="info_usuario">
-                <ul class="ul_lista_vertical" style="list-style-type: none;">
-                    <li><button>Amigos</button></li>
-                    <li><button>adicionar amigos</button></li>
-                </ul>
-                  
-            </div>
-        </div>
+       </div>
     </aside>
+    <center>11</center>
     <main>
 
     </main>

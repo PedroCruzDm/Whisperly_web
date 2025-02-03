@@ -1,3 +1,19 @@
+main#main_login{
+    background-color: #2B70E4;
+    justify-items: center;
+    align-content: center;
+}
+main#main_login .Titulo h1{
+    font-size: 2.5em;
+    margin-top: 10%;
+    color: #fff;
+}
+main#main_login .Titulo h2{
+    font-size: 1.5em;
+    margin-top: -20px;
+    color: #3d3d3d;
+    margin: 10%;
+}
 .containerlogin{
     margin: 5%;
     padding: 1%;
@@ -7,6 +23,7 @@
     align-content: center;
     justify-content: center;
     border: #333 8px solid;
+    background-color:#F2F2F2;
 
 }
 .containerlogin form h2{
@@ -75,7 +92,8 @@ form .personalizado_input input::placeholder {
     cursor: pointer;
     font-size: 1.2rem;
     border-radius: 5px;
-    background-color: var(--cor_secundaria);
+    font-weight: bold;
+    background-color: #2B70E4;
 }
 .containerlogin form button:hover{
     width: 100%;
@@ -85,6 +103,5 @@ form .personalizado_input input::placeholder {
     cursor: pointer;
     font-size: 1.2rem;
     border-radius: 5px;
-    background: rgb(255,88,88);
-    background: linear-gradient(240deg, #ff5858 0%, #ff5858 100%);
+    background-color: #1b4286;
 }
