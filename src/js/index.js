@@ -23,4 +23,15 @@ window.onload = () => {
     if(localizador == '/src/views/pages/offline.php' && status_conexao == true){
         location.assign('/src/index.php');
     }
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            console.log('Service Worker registrado com sucesso:', registration);
+          }).catch(function(error) {
+            console.log('Erro ao registrar o Service Worker:', error);
+          });
+        });
+      }
+      
 }

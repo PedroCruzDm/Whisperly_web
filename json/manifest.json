@@ -1,0 +1,11 @@
+{
+    "name": "Whisperly",
+    "short_name": "Whisperly",
+    "scope": "http://localhost:5000/",
+    "description": "Whisperly, uma rede social simples",
+    "start_url": "/src/views/login.php",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50"
+
+}
